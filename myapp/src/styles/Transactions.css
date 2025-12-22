@@ -1,0 +1,181 @@
+.transaction-card {
+    border-radius: 20px;
+    /* padding: 20px; */
+    text-align: center;
+    background: linear-gradient(145deg, #3a4a90, #2b365f);
+    color: #fff;
+    /* position: relative;
+    overflow: hidden; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* cursor: pointer; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.transaction-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.ring {
+  display: inline-block;
+  animation: ring 1s ease-in-out infinite; /* <-- infinite loop */
+  transform-origin: top center; /* pivot at the top of the bell */
+}
+
+.transaction-card .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.transaction-card:hover .icon-wrapper {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.transaction-card h5 {
+    font-weight: 600;
+    /* margin-bottom: 8px; */
+}
+
+.transaction-card p {
+    /* margin-bottom: 5px; */
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+/* Optional underline effect with gradient */
+.transactions-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 8px auto 0;
+    background: rgb(34,203,167);
+    border-radius: 2px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Animated Title like Transactions */
+.transactions-title {
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(-45deg, rgb(34,203,167), #00ffe5, rgb(34,203,167), #00ffe5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Category Table */
+.category-table {
+    background: rgba(34, 203, 167, 0.1); /* subtle green tint */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.category-table thead tr {
+    background: linear-gradient(90deg, rgb(34,203,167), #00ffe5);
+    color: #e2dede;
+    font-weight: 600;
+}
+
+
+/* Category Icon */
+.category-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: rgb(34,203,167);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #2bb8a8;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Account Cards */
+.account-card {
+    background: rgba(34,203,167,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.account-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Icon wrapper */
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    background: rgba(34,203,167,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.account-card:hover .icon-wrapper {
+    background: rgba(34,203,167,0.5);
+}
+
+/* Buttons */
+.btn-danger, .btn-warning {
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover, .btn-warning:hover {
+    transform: scale(1.05);
+}

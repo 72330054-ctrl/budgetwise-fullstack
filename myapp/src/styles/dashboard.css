@@ -1,0 +1,202 @@
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Ensure the page can scroll */
+      /* html, */
+      body {
+          min-height: 100%;
+          height: auto;
+          overflow-y: auto;
+          /* background-color: var(--dark-bg); */
+          /* dark background for the page */
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: var(--text);
+      }
+
+      .quick-actions-grid .action-btn {
+          margin-bottom: 20px;
+          /* adds vertical spacing between cards */
+          padding: 20px 10px;
+          /* makes cards taller */
+          text-align: center;
+          border-radius: 15px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          margin-left: 10px;
+          max-width: 300px;
+      }
+
+      .quick-actions-grid .action-btn:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .quick-actions-grid .action-icon {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+          color: #007bff;
+          /* optional: icon color */
+      }
+
+      .quick-actions-grid .action-text {
+          font-weight: 600;
+          font-size: 1.1rem;
+          color: white !important;
+      }
+
+      .card-header {
+          color: white !important;
+      }
+
+      :root {
+          --primary: #7c3aed;
+          --primary-dark: #6d28d9;
+          --secondary: #06d6a0;
+          --danger: #ef476f;
+          --warning: #ffd166;
+          --dark-bg: #0f0f23;
+          --dark-card: #1a1a2e;
+          --dark-card-hover: #22223a;
+          --text: #e2e8f0;
+          --text-muted: #94a3b8;
+          --border: #2d3748;
+      }
+
+
+
+
+      /* Financial Overview */
+      .financial-overview {
+          grid-column: 1 / 4;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 15px;
+      }
+
+      .metric {
+          text-align: center;
+          padding: 20px 15px;
+      }
+
+      .row-card {
+          background-color: #202647;
+          /* lighter variant if you want */
+
+
+
+          background: rgba(26, 26, 46, 0.7);
+          backdrop-filter: blur(10px);
+          border-radius: 16px;
+          padding: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+      }
+      .row-card-actions{
+          background-color: #202647;
+          /* lighter variant if you want */
+          background: rgba(26, 26, 46, 0.7);
+          backdrop-filter: blur(10px);
+          border-radius: 16px;
+          padding: 20px 0px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+      }
+      .action-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 15px 10px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+          border: 1px solid var(--border);
+          cursor: pointer;
+          transition: all 0.3s ease;
+      }
+
+      .action-btn:hover {
+          background: rgba(124, 58, 237, 0.2);
+          border-color: var(--primary);
+          transform: translateY(-3px);
+      }
+
+      .action-icon {
+          font-size: 20px;
+          margin-bottom: 8px;
+          color: var(--primary);
+      }
+
+      .action-text {
+          font-size: 13px;
+          text-align: center;
+      }
+
+      /* Floating Action Button */
+      .fab {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background: var(--primary);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          box-shadow: 0 5px 20px rgba(124, 58, 237, 0.5);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          z-index: 100;
+      }
+
+      .fab:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 25px rgba(124, 58, 237, 0.7);
+      }
+
+      .row-card:hover {
+          background: rgba(34, 34, 58, 0.8);
+          transform: translateY(-5px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .metric-value {
+          font-size: 40px;
+          font-weight: 700;
+          margin: 10px 0;
+          color: white;
+      }
+
+      .matric-change {
+          color: white !important;
+      }
+
+      .metric.income .metric-value {
+          color: var(--secondary);
+
+      }
+
+      .metric.expenses .metric-value {
+          color: var(--danger);
+      }
+
+      .metric.budget .metric-value {
+          color: var(--warning);
+      }
+
+
+      .metric-label {
+          font-size: 18px !important;
+          color: #94a3b8 !important;
+      }
+
+      .metric-change {
+          color: white !important;
+      }

@@ -1,0 +1,135 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Layout === */
+.contact {
+  width: 100%;
+  min-height: 100vh;           /* grow if form taller */
+  display: flex;
+  align-items: stretch;        /* both sides same height */
+}
+
+/* Left image side */
+.contact .leftSide {
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Right side with form */
+.contact .rightSide {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  overflow: visible;           /* ensure button visible */
+  background-color: #fff;      /* clean background */
+}
+
+/* === Heading === */
+.contact .rightSide h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: clamp(28px, 6vw, 50px);
+  margin-bottom: 25px;
+}
+
+/* === Form === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 560px;
+}
+
+/* Labels */
+form label {
+  color: grey;
+  font-size: 15px;
+}
+
+/* Inputs + textarea */
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+  padding: 10px 2px;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
+/* === Button === */
+form button {
+  margin-top: 30px;
+  width: fit-content;
+  min-width: 160px;
+  height: 44px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;   /* ensures z-index works */
+  z-index: 2;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact .leftSide {
+    width: 100%;
+    height: clamp(220px, 35vh, 360px);
+  }
+
+  .contact .rightSide {
+    width: 100%;
+    padding: 30px 20px 80px; /* bottom padding for button */
+  }
+
+  form {
+    width: 100%;
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 600px) {
+  form button {
+    width: 100%;
+  }
+}
