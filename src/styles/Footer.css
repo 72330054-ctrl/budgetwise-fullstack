@@ -1,0 +1,19 @@
+footer.footer-fixed {
+  position: fixed;   /* fixed to viewport */
+  bottom: 0;         /* stick to bottom */
+  left: 0;           /* start from left edge */
+  width: 100%;       /* full width */
+  z-index: 999;      /* stay above other content */
+}
+/* --red:#ff3b30;
+--green:#02bb6a
+--purple:#9963d0
+--yellow:#ffcc00
+--gray:#a2a8b4
+--blue:#
+#3ca2ff
+--lightwhite:##ffffff
+
+
+
+*/

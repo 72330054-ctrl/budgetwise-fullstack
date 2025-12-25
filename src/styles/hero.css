@@ -1,0 +1,93 @@
+.hero{
+    height: 500px;
+}
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+        }
+.hero-section{
+/* margin-top: 60px; */
+}
+.sp{
+    color: #052659;
+}
+.hero-title{
+    font-weight: bolder;
+    font-size: 50px;
+}
+/* .hero-image{
+    height: 400px;
+    width: 400px;
+} */
+.floating-image {
+    position: absolute;      /* allows overlapping */
+    top: 100%;                /* adjust vertical position */
+    transform: translateY(-20%) !important; 
+    transform: translateX(40%); 
+    /* center vertically on its point */
+    width: 100%;             /* adjust as needed */
+    max-width: 400px;        /* optional max width */
+    z-index: 5;              /* ensures it is above the curved section */
+}
+
+      .curved-section {
+    background-color: #052659; /* Purple shade */
+    padding: 60px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+/* margin-top: 60px; */
+    /* Oblique top line */
+    clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
+
+    /* Rounded bottom corners */
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+        .feature {
+            width: 45%;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .avatars {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatars img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .download-text {
+            margin-left: 20px;
+            font-weight: 500;
+            color: white;
+        }
+
+        @media(max-width: 768p){
+.curved-section {
+                flex-direction: column;
+                text-align: center;
+                border-top-left-radius: 60px;
+            }
+
+            .feature {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
+        
+    
